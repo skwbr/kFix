@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.d4.kfixpremium"
+      android:versionCode="23"
+      android:versionName="2.3">
+    <application android:label="@string/app_name" android:icon="@drawable/icon">
+        <activity android:name=".MainActivity"
+                  android:launchMode="singleTop"
+                  android:label="@string/app_name" 
+                  android:screenOrientation="sensor"
+                  android:configChanges="orientation|keyboardHidden|keyboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:enabled="true" android:name=".BootUpReceiver"
+        android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+        <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:name=".MainService">
+            <intent-filter>
+            <action android:name="android.intent.action.CONFIGURATION_CHANGED"/>    
+            </intent-filter>
+        </service>
+           <receiver android:name=".WidgetManager" android:label="kFix">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.d4.kfixpremium.ACTION_WIDGET_RECEIVER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+      </application>
+      <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-sdk android:targetSdkVersion="8" android:minSdkVersion="8" />
+</manifest> 

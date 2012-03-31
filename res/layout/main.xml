@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+android:id="@+id/widget33"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <TextView android:layout_centerHorizontal="true" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:text="D4rKn3sSyS's kFix" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="center_horizontal"></TextView>
+    <TextView android:layout_alignParentLeft="true" android:id="@+id/textView2" android:layout_gravity="left" android:layout_width="wrap_content" android:text="kFix:" android:layout_height="wrap_content"></TextView>
+    <CheckBox android:layout_alignParentLeft="true"  android:layout_gravity="left" android:layout_width="wrap_content" android:text="Enabled" android:id="@+id/checkBox1" android:layout_height="wrap_content"></CheckBox>
+    <TextView android:layout_alignParentLeft="true" android:id="@+id/TextView01" android:layout_gravity="left" android:layout_width="wrap_content" android:text="Light Levels" android:layout_height="wrap_content"></TextView>
+    <SeekBar android:layout_alignParentLeft="true"  android:layout_width="match_parent" android:id="@+id/SeekBar01" android:max="255" android:layout_height="wrap_content"></SeekBar>
+    <TextView android:layout_alignParentLeft="true" android:id="@+id/TextView02" android:layout_gravity="left" android:layout_width="wrap_content" android:text="Light Sensibility (Lower it's more sensible)" android:layout_height="wrap_content"></TextView>
+    <SeekBar android:layout_alignParentLeft="true"  android:id="@+id/seekBar1" android:layout_height="wrap_content" android:layout_width="match_parent" android:max="30000"></SeekBar>
+    <Button android:text="About" android:id="@+id/button1" android:layout_width="fill_parent" android:layout_height="wrap_content"></Button>
+</LinearLayout>
